@@ -1,0 +1,196 @@
+Descripción del producto Redes de Transporte
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+	Esta carpeta contiene las capas de Redes de Transporte (RT), agrupadas por modos de transporte y provincia, que se suministran a través del 
+Centro de Descargas del Centro Nacional de Información Geográfica.
+Dentro de las carpetas, las capas se encuentran en formato SHP y cada una se compone de los ficheros que se listan a continuación, con la nomenclatura 
+que se especifica.
+Su sistema de referencia es ETRS89, en coordenadas geográficas (EPSG 4258).
+
+Nomenclatura de los ficheros almacenados en RT_Provincia.zip:
+
+RT_Provincia.zip
+
+	RT_VIARIA
+	¯¯¯¯¯¯¯¯¯
+	Capa rt_areactra_s
+		rt_areactra_s.dbf
+		rt_areactra_s.prj
+		rt_areactra_s.shp
+		rt_areactra_s.shx
+		rt_areactra_s.cpg
+		
+	Capa rt_nodoctra_p
+		rt_nodoctra_p.dbf
+		rt_nodoctra_p.prj
+		rt_nodoctra_p.shp
+		rt_nodoctra_p.shx
+		rt_nodoctra_p.cpg
+		
+	Capa rt_portalpk_p
+		rt_portalpk_p.dbf
+		rt_portalpk_p.prj
+		rt_portalpk_p.shp
+		rt_portalpk_p.shx
+		rt_portalpk_p.cpg
+		
+	Capa rt_puntoctra_p
+		rt_puntoctra_p.dbf
+		rt_puntoctra_p.prj
+		rt_puntoctra_p.shp
+		rt_puntoctra_p.shx
+		rt_puntoctra_p.cpg
+
+	Capa rt_tramo_vial
+		rt_tramo_vial.dbf
+		rt_tramo_vial.prj
+		rt_tramo_vial.shp
+		rt_tramo_vial.shx
+		rt_tramo_vial.cpg
+		
+Nota:
+ - La capa rt_areactra_s adquiere el campo nombre de la capa rt_puntoctra_p, con la que se relaciona mediante identificadores
+ - La capa rt_nodoctra_p adquiere los campos id_tramo e id_ptoctra de las tablas de relación rrt_nodoctra_tramo y rrt_nodoctra_puntoctra, presentes en el modelo de RT.
+ - La capa rt_tramo_vial es el resultado de la unión (JOIN) de la capa rt_tramo_l (geometría de los viales) con la tabla rt_vial_a (información alfanumérica de los viales) mediante la tabla rrt_tramo_vial (tabla que relaciona
+	los identificadores de los tramos con los viales asociados) presentes en el modelo de datos de RT.
+
+	RT_FFCC
+	¯¯¯¯¯¯¯
+	Capa rt_areaffcc_s
+		rt_areaffcc_s.dbf
+		rt_areaffcc_s.prj
+		rt_areaffcc_s.shp
+		rt_areaffcc_s.shx
+		rt_areaffcc_s.cpg
+		
+	Capa rt_estacionffcc_p
+		rt_estacionffcc_p.dbf
+		rt_estacionffcc_p.prj
+		rt_estacionffcc_p.shp
+		rt_estacionffcc_p.shx
+		rt_estacionffcc_p.cpg
+		
+	Capa rt_nodoffcc_p
+		rt_nodoffcc_p.dbf
+		rt_nodoffcc_p.prj
+		rt_nodoffcc_p.shp
+		rt_nodoffcc_p.shx
+		rt_nodoffcc_p.cpg
+	
+	Capa rt_pkffcc_p
+		rt_pkffcc_p.dbf
+		rt_pkffcc_p.prj 
+		rt_pkffcc_p.shp 
+		rt_pkffcc_p.shx 
+		rt_pkffcc_p.cpg
+		
+	Capa rt_tramofc_linea
+		rt_tramofc_linea.dbf
+		rt_tramofc_linea.prj
+		rt_tramofc_linea.shp
+		rt_tramofc_linea.shx
+		rt_tramofc_linea.cpg
+
+Nota:
+ - La capa rt_areaffcc_s adquiere el campo nombre de la capa rt_estacionffcc_p.dbf, con la que se relaciona mediante identificadores
+ - La capa rt_nodoffcc_p adquiere los identificadores de tramo y de estación de las tablas de relación rrt_nodoffcc_tramoffcc y rrt_nodoffcc_estacionffcc presentes en el modelo de RT
+ - La capa rt_tramofc_linea es el resultado de la unión de la capa rt_tramoffcc_l con las tablas rrt_tramoffcc_lineaffcc -tabla que relaciona
+	los identificadores de los tramos con las líneas asociadas- y rt_lineaffcc_a -información alfanumérica de las líneas- presentes en el modelo de datos de RT.
+	
+	RT_AEREA
+	¯¯¯¯¯¯¯¯
+	Capa rt_areaaereo_s
+		rt_areaaereo_s.dbf
+		rt_areaaereo_s.prj
+		rt_areaaereo_s.shp
+		rt_areaaereo_s.shx
+		rt_areaaereo_s.cpg
+	
+	Capa rt_aerodromo_p
+		rt_aerodromo_p.dbf
+	    	rt_aerodromo_p.prj
+	    	rt_aerodromo_p.shp
+	    	rt_aerodromo_p.shx
+		rt_aerodromo_p.cpg
+	
+	Capa rt_nodoaereo_p
+		rt_nodoaereo_p.dbf
+	    	rt_nodoaereo_p.prj
+	   	rt_nodoaereo_p.shp
+	    	rt_nodoaereo_p.shx
+		rt_nodoaereo_p.cpg
+
+Nota:
+ - La capa rt_areaaereo_s adquiere el campo nombre de la capa rt_aerodromo_p, con la que se relaciona mediante identificadores
+ - La capa rt_nodoaereo_p adquiere el identificador del aeródromo a través de la tabla de relación rrt_nodoaereo_aerodromo presente en el modelo de datos de RT.
+		
+	RT_VIAS_NAVEGABLES
+	¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+	Capa rt_areamar_s
+		rt_areamar_s.dbf
+		rt_areamar_s.prj
+		rt_areamar_s.shp
+		rt_areamar_s.shx
+		rt_areamar_s.cpg
+	
+	Capa rt_lineamar_l
+		rt_lineamar_l.dbf
+		rt_lineamar_l.prj
+		rt_lineamar_l.shp
+		rt_lineamar_l.shx
+		rt_lineamar_l.cpg
+		
+	Capa rt_nodomar_p
+		rt_nodomar_p.dbf
+	    	rt_nodomar_p.prj
+	    	rt_nodomar_p.shp
+	    	rt_nodomar_p.shx
+		rt_nodomar_p.cpg
+
+	
+	Capa rt_puerto_p
+		rt_puerto_p.dbf
+	   	rt_puerto_p.prj
+	   	rt_puerto_p.shp
+	    	rt_puerto_p.shx
+		rt_puerto_p.cpg
+
+Nota:		
+ - La capa rt_areamar_s adquiere el campo nombre de la capa rt_puerto_p, con la que se relaciona mediante identificadores
+ - La capa rt_nodomar_p adquiere los identificador de linea mar y puerto a través de la tabla de relación rrt_nodomar_lineamar y rrt_nodomar_puerto presentes en el modelo RT.
+ 
+	RT_INTERMODAL
+	¯¯¯¯¯¯¯¯¯¯¯¯¯
+	Tabla rt_conexion_a
+		rt_conexion_a.dbf
+		rt_conexion_a.cpg	
+	
+		
+	RT_CABLE
+	¯¯¯¯¯¯¯¯
+	Capa rt_cable_l
+		rt_cable_l.dbf
+		rt_cable_l.prj
+		rt_cable_l.shp
+		rt_cable_l.shx
+		rt_cable_l.cpg
+	
+	Capa rt_nodocable_p
+		rt_nodocable_p.dbf
+		rt_nodocable_p.prj
+		rt_nodocable_p.shp
+		rt_nodocable_p.shx
+		rt_nodocable_p.cpg
+
+Nota:
+ - La capa rt_cable_l adquiere los campos id_tramoc y tipo_cable de la capa rt_tramoc_l y el resto de atributos de la tabla rt_cable_a, presentes en el modelo RT. 
+ - La capa rt_nodocable_p adquiere el identificador del tramo de cable con el que está realcionado -id_tramoc- a través de la tabla de relación rrt_nodocable_tramoc, presente en el modelo RT. 	
+
+================================================		
+
+Los campos de las capas son los del modelo de datos de RT, acompañados en su caso por un campo terminado en «D», indicativa de descripción, que traduce 
+los códigos a su valor literal contemplado también en el modelo. El modelo de RT puede consultarse en: http://www.ign.es/web/ign/portal/cbg-redes-transporte 
+	
+	
+	
+	
+	
